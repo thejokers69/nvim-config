@@ -18,12 +18,19 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "solarized-osaka",
+				colorscheme = "solarized", --Set the default colorscheme
 				news = {
 					lazyvim = true,
 					neovim = true,
 				},
 			},
+		},
+		-- Solarized color theme plugin
+		{
+			"shaunsingh/solarized.nvim",
+			config = function()
+				vim.cmd("colorscheme solarized")
+			end,
 		},
 		-- import any extras modules here
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
@@ -41,6 +48,7 @@ require("lazy").setup({
 		-- { import = "lazyvim.plugins.extras.coding.yanky" },
 		-- { import = "lazyvim.plugins.extras.editor.mini-files" },
 		-- { import = "lazyvim.plugins.extras.util.project" },
+		-- -- Import other plugins
 		{ import = "plugins" },
 	},
 	defaults = {
