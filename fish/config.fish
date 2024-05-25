@@ -12,3 +12,8 @@ alias gs 'git status'
 if test -f "$HOME/Library/Application Support/amazon-q/shell/bash_profile.pre.fish"
     source "$HOME/Library/Application Support/amazon-q/shell/bash_profile.pre.fish"
 end
+
+# Homebrew
+set -gx PATH /opt/homebrew/bin $PATH
+set -gx PATH /opt/homebrew/sbin $PATH
+

@@ -1,3 +1,5 @@
+-- plugins-setup.lua
+
 -- auto install packer if not installed
 local ensure_packer = function()
   local fn = vim.fn
@@ -13,7 +15,7 @@ local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
@@ -111,3 +113,4 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
+

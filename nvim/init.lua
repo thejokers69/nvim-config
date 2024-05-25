@@ -1,3 +1,4 @@
+-- init.lua
 require("josean.plugins-setup")
 require("josean.core.options")
 require("josean.core.keymaps")
@@ -14,3 +15,4 @@ require("josean.plugins.lsp.null-ls")
 require("josean.plugins.autopairs")
 require("josean.plugins.treesitter")
 require("josean.plugins.gitsigns")
+
