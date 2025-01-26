@@ -18,19 +18,32 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "solarized", --Set the default colorscheme
+				colorscheme = "tokyonight", -- Changed from "solarized" to "tokyonight"
 				news = {
 					lazyvim = true,
 					neovim = true,
 				},
 			},
 		},
-		-- Solarized color theme plugin
+		-- Remove the solarized.nvim plugin and add tokyonight.nvim
 		{
-			"shaunsingh/solarized.nvim",
-			config = function()
-				vim.cmd("colorscheme solarized")
-			end,
+			"folke/tokyonight.nvim", -- Tokyo Night plugin
+			lazy = false, -- Load immediately
+			priority = 1000, -- High priority to ensure it loads first
+			opts = {
+				style = "storm", -- Try: "night" (default), "storm", "day", "moon"
+				transparent = true, -- Transparent background
+				terminal_colors = true, -- Sync terminal colors
+				styles = {
+					comments = { italic = true }, 
+					keywords = { bold = true },
+				},
+				-- Override specific colors (example):
+				on_colors = function(colors)
+					colors.error = "#ff0000" -- Make errors bright red
+				end,
+			},
+			-- No need for config() if LazyVim's opts sets the theme
 		},
 		-- import any extras modules here
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
