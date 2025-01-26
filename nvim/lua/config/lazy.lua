@@ -12,6 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	rocks = {
+		hererocks = false,
+		enabled = false
+	},
 	spec = {
 		-- add LazyVim and import its plugins
 		{
@@ -29,16 +33,16 @@ require("lazy").setup({
 		{
 			"folke/tokyonight.nvim", -- Tokyo Night plugin
 			lazy = false, -- Load immediately
-			priority = 1000,
+			priority = 1000, -- High priority to ensure it loads first
 			init = function()
-				vim.cmd.colorscheme("tokyonight")
-			end, -- High priority to ensure it loads first
+				vim.cmd.colorscheme("tokyonight") -- force-set here as fallback
+			end,
 			opts = {
 				style = "night", -- Try: "night" (default), "storm", "day", "moon"
 				transparent = false, -- Transparent background
 				terminal_colors = true, -- Sync terminal colors
 				styles = {
-					comments = { italic = true },
+					comments = { italic = true }, 
 					keywords = { bold = true },
 				},
 				-- Override specific colors (example):
