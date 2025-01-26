@@ -1,0 +1,31 @@
+# What protocol to use when performing Git operations. Supported values: ssh, https.
+git_protocol: ssh
+# What editor glab should run when creating issues, merge requests, etc. This global config cannot be overridden by hostname.
+editor:
+# What browser glab should run when opening links. This global config cannot be overridden by hostname.
+browser:
+# Set your desired Markdown renderer style. Available options are [dark, light, notty]. To set a custom style, refer to https://github.com/charmbracelet/glamour#styles
+glamour_style: dark
+# Allow glab to automatically check for updates and notify you when there are new updates.
+check_update: true
+# Whether or not to display hyperlink escape characters when listing items like issues or merge requests. Set to TRUE to display hyperlinks in TTYs only. Force hyperlinks by setting FORCE_HYPERLINKS=1 as an environment variable.
+display_hyperlinks: false
+# Default GitLab hostname to use.
+host: gitlab.com
+# Set to true (1) to disable prompts, or false (0) to enable them.
+no_prompt: false
+# Configuration specific for GitLab instances.
+hosts:
+    gitlab.com:
+        # What protocol to use to access the API endpoint. Supported values: http, https.
+        api_protocol: https
+        # Configure host for API endpoint. Defaults to the host itself.
+        api_host: gitlab.com
+        # Your GitLab access token. To get one, read https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
+        token: !!null ff1db121b476984a4ad90c396fb21771dd5266b91c63c16c965ee620de946af2
+        is_oauth2: "true"
+        oauth2_refresh_token: 7d7a5a964a0c7d57e9e8b8dbe8dc7bd3690b9a06fc9f6b33361001fec901f4a6
+        oauth2_expiry_date: 20 Jan 25 21:27 +01
+        oauth2_code_verifier: S3erg0TSkmYXKLQJnFWCVQ-tXk5qjuEmd3Bz_NdsvQs
+        git_protocol: https
+        user: thejokers69

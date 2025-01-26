@@ -1,3 +1,5 @@
+#  ~/.config/fish/config.fish
+
 # Set environment variables
 set -x PATH /usr/local/bin $PATH
 
