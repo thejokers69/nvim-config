@@ -27,3 +27,24 @@ simple-update-notifier/
 github-copilot/ai/
 github-copilot/apps.json
 github-copilot/versions.json
+
+
+# fichiers sensibles 
+**/configstore/
+**/github-copilot/
+**/glab-cli/
+**/grit/
+**/op/
+**/fish/fish_variables
+**/fish/fishd.tmp.*
+**/iterm2/
+**/nvim.zip
+**/plugin/packer_compiled.lua
+**/lazy-lock.json
+**/lazyvim.json
+
+# Fichiers système
+.DS_Store
+*.swp
+*.swo
+*.log
