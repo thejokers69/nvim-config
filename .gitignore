@@ -1,0 +1,29 @@
+# General system/editor files
+*.zip
+*.tmp
+*.lck
+.DS_Store
+
+# Copilot chat sessions
+.github-copilot/iu/chat-sessions/
+
+# Local tool configurations
+.configstore/
+.glab-cli/
+.grit/
+
+# Fish shell temporary files
+fish/fishd.tmp.*
+fish/conf.d/grit.env.fish
+
+# Local override files
+op/plugins/
+op/plugins.sh
+
+# Node.js/npm artifacts
+simple-update-notifier/
+
+# Application-specific caches
+github-copilot/ai/
+github-copilot/apps.json
+github-copilot/versions.json
