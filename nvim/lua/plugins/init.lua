@@ -1,3 +1,4 @@
+-- /Users/thejoker/.config/nvim/lua/plugins/init.lua
 return {
 	-- Solarized color scheme plugin
 	{

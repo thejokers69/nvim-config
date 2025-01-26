@@ -48,3 +48,13 @@ github-copilot/versions.json
 *.swp
 *.swo
 *.log
+
+# Neovim
+/lazy-lock.json
+/lazyvim.json
+/plugin/
+
+# Configurations sensibles
+**/github-copilot/
+**/glab-cli/
+**/op/

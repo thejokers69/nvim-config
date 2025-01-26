@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 <div align="center">
-  <img src="Screenshot 2025-01-26 at 7.57.41 PM.png" width="600" alt="Tokyo Night Theme Preview">
+  <img src="Captues/Screenshot 2025-01-26 at 7.57.41 PM.png" width="600" alt="Tokyo Night Theme Preview">
 </div>
 
 ## ✨ Features

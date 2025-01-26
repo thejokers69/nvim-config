@@ -1,3 +1,4 @@
+-- /Users/thejoker/.config/nvim/lua/josean/core/options.lua
 local opt = vim.opt -- for conciseness
 
 -- line numbers
@@ -21,7 +22,7 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
-opt.termguicolors = true -- enable true color support
+-- opt.termguicolors = true -- enable true color support
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
