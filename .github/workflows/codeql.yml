@@ -35,9 +35,9 @@ jobs:
         language: ["javascript", "python"]
         include:
           - language: javascript
-            build-mode: "automatic"
+            build-mode: "autobuild"
           - language: python
-            build-mode: "automatic"
+            build-mode: "autobuild"
 
     steps:
       - name: Checkout repository
