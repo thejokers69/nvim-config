@@ -43,21 +43,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
           build-mode: ${{ matrix.build-mode }}
 
-      - if: matrix.build-mode == 'manual'
-        shell: bash
+      - name: Build project (JavaScript)
+        if: matrix.language == 'javascript'
         run: |
-          echo 'If you are using a "manual" build mode for one or more of the' \
-            'languages you are analyzing, replace this with the commands to build' \
-            'your code, for example:'
-          echo '  make bootstrap'
-          echo '  make release'
-          exit 1
+          npm install
+          npm run build
+
+      - name: Build project (Python)
+        if: matrix.language == 'python'
+        run: |
+          pip install -r requirements.txt
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
