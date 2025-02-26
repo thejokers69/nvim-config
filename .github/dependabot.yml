@@ -1,6 +1,12 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # Change this to the appropriate ecosystem
-    directory: "/" # Ensure this is the correct directory where package.json is located
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    labels:
+      - "security"
+    commit-message:
+      prefix: "fix(security)"
+    open-pull-requests-limit: 10
+    target-branch: "master"
