@@ -111,7 +111,28 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	use("github/copilot.vim") -- GitHub Copilot plugin
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
 end)
+
+-- Copilot configuration
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+-- Basic logging function using plenary.nvim (if installed)
+local function log_message(message)
+	local plenary_log = require('plenary.log').new({
+		plugin = 'my_nvim_log',
+		level = 'info',
+		use_console = false,
+		highlights = true,
+		info_level = 'info',
+	})
+	plenary_log.info(message)
+end
+
+-- Test logging
+log_message("Neovim is configured and logging is enabled.")
