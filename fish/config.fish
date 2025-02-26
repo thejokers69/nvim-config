@@ -19,3 +19,24 @@ end
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH /opt/homebrew/sbin $PATH
 
+abbr -a p pnpm
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /opt/anaconda3/bin/conda
+    eval /opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/opt/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/opt/anaconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/opt/anaconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+
+# Auto-Warpify
+printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "Darwin" }}œ' 
+
+# Auto-Warpify
+printf P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "$(uname)" }}œ 

@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	rocks = {
 		hererocks = false,
-		enabled = false
+		enabled = false,
 	},
 	spec = {
 		-- add LazyVim and import its plugins
@@ -35,6 +35,7 @@ require("lazy").setup({
 			lazy = false, -- Load immediately
 			priority = 1000, -- High priority to ensure it loads first
 			init = function()
+				vim.o.termguicolors = true
 				vim.cmd.colorscheme("tokyonight") -- force-set here as fallback
 			end,
 			opts = {
@@ -42,8 +43,8 @@ require("lazy").setup({
 				transparent = false, -- Transparent background
 				terminal_colors = true, -- Sync terminal colors
 				styles = {
-					comments = { italic = true }, 
-					keywords = { bold = true },
+					comments = { italic = true },
+					keywords = { italic = false },
 				},
 				-- Override specific colors (example):
 				on_colors = function(colors)
@@ -55,6 +56,29 @@ require("lazy").setup({
 				vim.cmd.colorscheme("tokyonight") -- explicitly set here
 			end,
 		},
+		-- Add nvim-tree plugin
+		{
+			"nvim-tree/nvim-tree.lua",
+			dependencies = { "nvim-tree/nvim-web-devicons" },
+			config = function()
+				require("nvim-tree").setup({
+					renderer = {
+						icons = {
+							glyphs = {
+								folder = {
+									arrow_closed = "▶",
+									arrow_open = "▼",
+									default = "",
+									open = "",
+									empty = "",
+									empty_open = "",
+								},
+							},
+						},
+					},
+				})
+			end,
+		},
 		-- import any extras modules here
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
@@ -63,7 +87,7 @@ require("lazy").setup({
 		-- { import = "lazyvim.plugins.extras.lang.markdown" },
 		{ import = "lazyvim.plugins.extras.lang.rust" },
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
-		{ import = "lazyvim.plugins.extras.coding.copilot" },
+		-- { import = "lazyvim.plugins.extras.coding.copilot" },
 		-- { import = "lazyvim.plugins.extras.dap.core" },
 		-- { import = "lazyvim.plugins.extras.vscode" },
 		{ import = "lazyvim.plugins.extras.util.mini-hipatterns" },
