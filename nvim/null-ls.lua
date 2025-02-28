@@ -13,11 +13,13 @@ null_ls.setup({
     sources = sources,
     on_attach = function(client, bufnr)
         -- Keymaps for lsp
-        if client.resolved_capabilities.document_formatting then
+        if client.server_capabilities.documentFormattingProvider then
             vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", { noremap = true, silent = true })
         end
-        if client.resolved_capabilities.document_range_formatting then
+        if client.server_capabilities.documentRangeFormattingProvider then
             vim.api.nvim_buf_set_keymap(bufnr, "v", "<leader>f", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", { noremap = true, silent = true })
         end
     end,
 })
+        
+        
