@@ -21,6 +21,16 @@
   - Fuzzy search (Telescope)
 - Custom keymaps for enhanced workflow
 - Modular structure for easy customization
+- **GitHub Copilot Integration**: 🤖 The repository includes configuration for GitHub Copilot, which provides AI-powered code suggestions. This can be found in `nvim/lua/josean/plugins-setup.lua`.
+- **Custom Keymaps**: ⌨️ The repository has extensive custom keymaps for improved workflow, such as navigation, editing, and window management. These can be found in `nvim/lua/config/keymaps.lua` and `nvim/lua/josean/core/keymaps.lua`.
+- **LSP Configuration**: 🛠️ The repository is pre-configured with LSP servers for various languages, including TypeScript, Rust, and Tailwind. This can be found in `nvim/lua/josean/plugins/lsp/lspconfig.lua`.
+- **Plugin Management with Lazy.nvim**: 📦 The repository uses Lazy.nvim for efficient plugin management, ensuring a smooth and fast setup. This can be found in `nvim/lua/config/lazy.lua`.
+- **Code Formatting and Linting**: 🧹 The repository includes configuration for code formatting and linting using Prettier and ESLint. This can be found in `nvim/lua/josean/plugins/lsp/null-ls.lua`.
+- **Git Integration**: 🐙 The repository includes Git integration with Gitsigns, providing visual indicators for line modifications. This can be found in `nvim/lua/josean/plugins/gitsigns.lua`.
+- **Fuzzy Search with Telescope**: 🔍 The repository includes Telescope for fuzzy searching files, strings, and more. This can be found in `nvim/lua/josean/plugins/telescope.lua`.
+- **Auto Pairs and Tagging**: 🔗 The repository includes configuration for auto-closing pairs and tags using nvim-autopairs and nvim-ts-autotag. This can be found in `nvim/lua/josean/plugins/autopairs.lua`.
+- **Commenting**: 💬 The repository includes configuration for easy commenting using Comment.nvim. This can be found in `nvim/lua/josean/plugins/comment.lua`.
+- **Status Line with Lualine**: 📊 The repository includes a customized status line using Lualine with the Nightfly theme. This can be found in `nvim/lua/josean/plugins/lualine.lua`.
 
 ## 🛠️ Installation
 
