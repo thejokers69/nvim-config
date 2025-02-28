@@ -1,3 +1,5 @@
+-- This file contains custom discipline functions
+
 local M = {}
 
 function M.cowboy()

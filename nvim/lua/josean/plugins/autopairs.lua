@@ -1,3 +1,5 @@
+-- This file configures the nvim-autopairs plugin
+
 -- import nvim-autopairs safely
 local autopairs_setup, autopairs = pcall(require, "nvim-autopairs")
 if not autopairs_setup then

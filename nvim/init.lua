@@ -1,4 +1,6 @@
 -- /Users/thejoker/.config/nvim/init.lua
+-- This file initializes Neovim
+
 if vim.loader then
 	vim.loader.enable()
 end
