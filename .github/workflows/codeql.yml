@@ -32,12 +32,22 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["javascript", "python"]
+        language: ["javascript", "python", "cpp", "csharp", "go", "java", "ruby"]
         include:
           - language: javascript
-            build-mode: "none"
+            build-mode: "manual"
           - language: python
-            build-mode: "none"
+            build-mode: "manual"
+          - language: cpp
+            build-mode: "manual"
+          - language: csharp
+            build-mode: "manual"
+          - language: go
+            build-mode: "manual"
+          - language: java
+            build-mode: "manual"
+          - language: ruby
+            build-mode: "manual"
 
     steps:
       - name: Checkout repository
@@ -63,3 +73,4 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{matrix.language}}"
+          queries: ./custom-queries

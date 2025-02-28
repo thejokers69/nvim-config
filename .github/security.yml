@@ -10,3 +10,9 @@ updates:
       prefix: "fix(security)"
     open-pull-requests-limit: 10
     target-branch: "master"
+
+permissions:
+  security-events: write
+  packages: read
+  actions: read
+  contents: read
