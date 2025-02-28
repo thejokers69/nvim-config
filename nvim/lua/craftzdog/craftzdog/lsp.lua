@@ -1,3 +1,5 @@
+-- This file contains custom LSP functions
+
 local M = {}
 
 function M.toggleInlayHints()

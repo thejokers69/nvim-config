@@ -1,3 +1,5 @@
+-- This file contains custom key mappings for Neovim
+
 -- set leader key to space
 vim.g.mapleader = " "
 

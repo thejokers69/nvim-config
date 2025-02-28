@@ -1,3 +1,5 @@
+-- This file contains custom key mappings for Neovim
+
 local discipline = require("craftzdog.discipline")
 
 discipline.cowboy()

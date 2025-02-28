@@ -1,3 +1,5 @@
+-- This file configures the Lua language server
+
 local lspconfig = require'lspconfig'
 
 lspconfig.lua_ls.setup {

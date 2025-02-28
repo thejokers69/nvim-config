@@ -1,4 +1,4 @@
--- /Users/thejoker/.config/nvim/lua/josean/core/options.lua
+-- This file contains custom options for Neovim
 local opt = vim.opt -- for conciseness
 
 -- line numbers

@@ -1,4 +1,4 @@
--- plugins-setup.lua
+-- This file sets up plugins for Neovim
 
 -- auto install packer if not installed
 local ensure_packer = function()

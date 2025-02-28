@@ -1,3 +1,4 @@
+-- This file contains functions for converting colors between hex and HSL
 -- https://github.com/EmmanuelOga/columns/blob/master/utils/color.lua
 
 local M = {}
