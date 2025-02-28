@@ -1,4 +1,5 @@
--- /Users/thejoker/.config/nvim/lua/plugins/init.lua
+-- This file initializes plugins for Neovim
+
 return {
 	-- Solarized color scheme plugin
 	{

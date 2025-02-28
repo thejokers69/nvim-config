@@ -1,4 +1,4 @@
--- selene: allow(global_usage)
+-- This file contains custom debugging functions for Neovim
 
 local M = {}
 
