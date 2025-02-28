@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "security"
+    commit-message:
+      prefix: "fix(security)"
+    open-pull-requests-limit: 10
+    target-branch: "master"
+
+permissions:
+  security-events: write
+  packages: read
+  actions: read
+  contents: read

@@ -1,0 +1,60 @@
+# General system/editor files
+*.zip
+*.tmp
+*.lck
+.DS_Store
+
+# Copilot chat sessions
+.github-copilot/iu/chat-sessions/
+
+# Local tool configurations
+.configstore/
+.glab-cli/
+.grit/
+
+# Fish shell temporary files
+fish/fishd.tmp.*
+fish/conf.d/grit.env.fish
+
+# Local override files
+op/plugins/
+op/plugins.sh
+
+# Node.js/npm artifacts
+simple-update-notifier/
+
+# Application-specific caches
+github-copilot/ai/
+github-copilot/apps.json
+github-copilot/versions.json
+
+
+# fichiers sensibles 
+**/configstore/
+**/github-copilot/
+**/glab-cli/
+**/grit/
+**/op/
+**/fish/fish_variables
+**/fish/fishd.tmp.*
+**/iterm2/
+**/nvim.zip
+**/plugin/packer_compiled.lua
+**/lazy-lock.json
+**/lazyvim.json
+
+# Fichiers système
+.DS_Store
+*.swp
+*.swo
+*.log
+
+# Neovim
+/lazy-lock.json
+/lazyvim.json
+/plugin/
+
+# Configurations sensibles
+**/github-copilot/
+**/glab-cli/
+**/op/
