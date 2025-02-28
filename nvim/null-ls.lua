@@ -13,4 +13,3 @@ null_ls.setup({
         -- Keymaps for lsp
     end,
 })
-
