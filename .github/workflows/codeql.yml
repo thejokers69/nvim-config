@@ -11,7 +11,7 @@ on:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
-    runs-on: ubuntu-latest  # No need for macos-latest since swift isn’t included
+    runs-on: ubuntu-latest  # No need for macos-latest since Swift isn’t included
     permissions:
       security-events: write
       packages: read
@@ -21,11 +21,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["lua", "javascript"]
+        language: ["javascript", "lua"]  # Only languages present in your repo
         include:
-          - language: lua
-            build-mode: "none"
           - language: javascript
+            build-mode: "none"
+          - language: lua
             build-mode: "none"
 
     steps:
