@@ -36,7 +36,7 @@ end
 
 
 # Auto-Warpify
-printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "Darwin" }}œ' 
+printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "Darwin" }}ï¿½' 
 
 # Auto-Warpify
-printf P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "$(uname)" }}œ 
+printf P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "$(uname)" }}ï¿½ 
