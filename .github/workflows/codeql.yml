@@ -21,11 +21,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ["javascript", "lua"]
+        language: ["javascript"]
         include:
           - language: javascript
-            build-mode: "none"
-          - language: lua
             build-mode: "none"
 
     steps:
