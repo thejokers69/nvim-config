@@ -20,6 +20,7 @@ set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH /opt/homebrew/sbin $PATH
 
 abbr -a p pnpm
+abbr -a f fnm
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
