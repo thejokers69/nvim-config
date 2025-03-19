@@ -21,6 +21,9 @@ set -gx PATH /opt/homebrew/sbin $PATH
 
 abbr -a p pnpm
 abbr -a f fnm
+abbr -a n npm
+abbr -a e exit
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
