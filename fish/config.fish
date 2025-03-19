@@ -41,3 +41,5 @@ printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname"
 
 # Auto-Warpify
 printf P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "$(uname)" }}� 
+
+fnm env --use-on-cd | source
