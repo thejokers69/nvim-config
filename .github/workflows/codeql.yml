@@ -2,44 +2,37 @@ name: "CodeQL Advanced"
 
 on:
   push:
-    branches: ["master"]
+    branches: [ "main" ]
   pull_request:
-    branches: ["master"]
+    branches: [ "main" ]
   schedule:
-    - cron: "38 3 * * 6"
+    - cron: '0 0 * * 0'
 
 jobs:
   analyze:
-    name: Analyze (${{ matrix.language }})
+    name: Analyze
     runs-on: ubuntu-latest
-    permissions:
-      security-events: write
-      packages: read
-      actions: read
-      contents: read
-
     strategy:
       fail-fast: false
       matrix:
-        language: ["javascript", "lua"]
-        include:
-          - language: javascript
-            build-mode: "none"
-          - language: lua
-            build-mode: "none"
-
+        language: ['javascript']
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: ${{ matrix.language }}
-          build-mode: ${{ matrix.build-mode }}
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+        config-file: .github/codeql/codeql-config.yml
 
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
-        with:
-          category: "/language:${{matrix.language}}"
-          queries: ./custom-queries
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        category: "/language:${{ matrix.language }}"
+
+    env:
+      CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: true
