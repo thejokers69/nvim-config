@@ -24,6 +24,7 @@ abbr -a f fnm
 abbr -a n npm
 abbr -a e exit
 
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /opt/anaconda3/bin/conda
