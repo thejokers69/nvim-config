@@ -1,1 +1,3 @@
-fnm env --use-on-cd --shell fish | source
+# Initialize fnm for fish shell
+set -gx FNM_DIR "$HOME/.fnm"
+[ -s "$HOME/.fnm/fnm.fish" ]; and . "$HOME/.fnm/fnm.fish"

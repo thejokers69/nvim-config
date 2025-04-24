@@ -38,14 +38,10 @@ end
 # <<< conda initialize <<<
 
 # Auto-Warpify
-printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "Darwin" }}'
-
-# Auto-Warpify
-printf P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "$(uname)" }}
+printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish", "uname": "%s" }}' (uname)
 
 fnm env --use-on-cd | source
 set -gx FNM_COREPACK_ENABLED true
-source ~/.config/op/plugins.sh
 
 # Cursor-specific configurations
 set -gx CURSOR_SHELL_INTEGRATION true
@@ -63,4 +59,30 @@ abbr -a cr 'code -r .'
 # Enable fish_greeting only in interactive shells
 if status is-interactive
     set -g fish_greeting "Welcome to Fish in Cursor!"
+
+    # Check which machine we're on and store in a local variable
+    set -l machine_name (hostname)
+
+    # NVM configuration
+    if functions -q nvm
+        # Set default Node version
+        if not test -e .nvmrc
+            nvm use lts
+        end
+    end
+
+    # Machine-specific configurations
+    switch $machine_name
+        case "MacBook-Pro*"
+            # MacBook Pro specific settings
+            set -gx NODE_PATH ~/.nvm/(nvm current)/lib/node_modules
+        case "Mac-mini*"
+            # Mac Mini specific settings
+            set -gx NODE_PATH ~/.nvm/(nvm current)/lib/node_modules
+    end
+
+    # Common configuration for both machines
+    if test -d ~/.nvm
+        set -gx NVM_DIR ~/.nvm
+    end
 end
