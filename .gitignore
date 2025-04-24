@@ -2,7 +2,6 @@
 *.zip
 *.tmp
 *.lck
-.DS_Store
 
 # Copilot chat sessions
 .github-copilot/iu/chat-sessions/
@@ -24,9 +23,9 @@ op/plugins.sh
 simple-update-notifier/
 
 # Application-specific caches
-github-copilot/ai/
-github-copilot/apps.json
-github-copilot/versions.json
+# github-copilot/ai/
+# github-copilot/apps.json
+# github-copilot/versions.json
 
 # Node modules
 node_modules/
@@ -102,3 +101,8 @@ fish/fish_variables
 
 # Fish shell configurations
 ~/.config/fish/conf.d/fnm.fish
+
+# Ignore GitHub Copilot files
+# github-copilot/
+# Ignore iTerm2 files
+# iterm2/
