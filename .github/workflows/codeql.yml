@@ -37,6 +37,12 @@ jobs:
         uses: github/codeql-action/analyze@v2
         with:
           category: "/language:${{ matrix.language }}"
+          upload: false
+
+      - name: Upload CodeQL results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
 
     env:
       CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: true
