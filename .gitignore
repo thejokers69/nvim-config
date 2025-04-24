@@ -38,7 +38,7 @@ node_modules/
 **/op/
 **/fish/fish_variables
 **/fish/fishd.tmp.*
-**/iterm2/
+# **/iterm2/
 **/nvim.zip
 **/plugin/packer_compiled.lua
 **/lazy-lock.json
