@@ -28,8 +28,10 @@ github-copilot/ai/
 github-copilot/apps.json
 github-copilot/versions.json
 
+# Node modules
+node_modules/
 
-# fichiers sensibles 
+# fichiers sensibles
 **/configstore/
 **/github-copilot/
 **/glab-cli/
@@ -78,5 +80,25 @@ bin-release/
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 
-
 fish/fish_variables
+
+# Environment files
+.env
+
+# Temporary files
+*~
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Compiled files
+*.o
+*.out
+*.class
+
+# Backup files
+*~
+
+# Fish shell configurations
+~/.config/fish/conf.d/fnm.fish
