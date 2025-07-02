@@ -95,12 +95,14 @@ end
 # # pnpm end
 
 # pnpm
-set -gx PNPM_HOME "/Users/thejokers69ml/Library/pnpm"
+set -gx PNPM_HOME /Users/thejokers69ml/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
