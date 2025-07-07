@@ -108,4 +108,3 @@ set --export PATH $BUN_INSTALL/bin $PATH
 set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 source /Users/thejokers69ml/.config/op/plugins.sh
 source ~/.config/op/plugins.sh
-source ~/.config/op/plugins.sh
